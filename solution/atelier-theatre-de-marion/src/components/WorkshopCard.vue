@@ -15,7 +15,10 @@ export default {
     props: {
         title: String,
         accentColour: String,
-        image: String,
+        image: {
+            type: String,
+            default: 'no-image.png'
+        },
         details: String
     },
     computed: {
