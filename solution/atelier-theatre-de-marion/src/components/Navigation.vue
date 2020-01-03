@@ -1,9 +1,9 @@
 <template>
     <div id="nav" class="row">
-        <NavButton class="col-2" title="Ateliers artistiques" route="/kids-workshops"/>
+        <NavButton class="offset-1 col-2" title="Ateliers artistiques" route="/kids-workshops"/>
         <NavButton class="col-2" title="Cours de formation" route="/masterclasses"/>
         <div class="col-2">
-            <NavButton class="" title="Home" route="/" image="@/assets/brand/logo-brown.svg"/><!-- TODO change-->
+            <NavBrand/>
             <router-link to="/contact-us">Contactez-nous!</router-link>
         </div>
         
@@ -21,10 +21,12 @@
 <script>
 
 import NavButton from '@/components/NavButton.vue'
+import NavBrand from '@/components/NavBrand.vue'
 
 export default {
     components: {
-        NavButton
+        NavButton,
+        NavBrand
     }
 }
 </script>
