@@ -1,11 +1,11 @@
 <template>
     <div class="nav-btn">
         <router-link :to="route" style="text-decoration: none;">
-            <div class="card" :style="cssProps">
+            <div class="card" :style="bgImage">
                 <div class="card-header">
                     <span>{{ title }}</span>
                 </div>
-                <div class="card-body" :style="bgImage">
+                <div class="card-body" >
 
                 </div>
             </div>
@@ -21,11 +21,6 @@ export default {
         image: String
     },
     computed: {
-        cssProps() {
-            return {
-                'backgroud-image': 'url(' + require('@/assets/'+this.image) + ')'
-            }
-        },
         bgImage() {
             return {
                 'background-image': 'url(' + require('@/assets/' + this.image) + ')'
