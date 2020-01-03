@@ -5,7 +5,7 @@
                 <div class="card-header">
                     <span>{{ title }}</span>
                 </div>
-                <div class="card-body">
+                <div class="card-body" :style="bgImage">
 
                 </div>
             </div>
@@ -24,6 +24,11 @@ export default {
         cssProps() {
             return {
                 '--bg-image': this.image
+            }
+        },
+        bgImage() {
+            return {
+                'background-image': 'url(' + require('@/assets/' + this.image) + ')'
             }
         }
     }
