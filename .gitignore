@@ -17,3 +17,5 @@ application/logs/*
 /vendor/
 
 solution/atelier-theatre-de-marion/src/package-lock.json
+
+solution/atelier-theatre-de-marion/package-lock.json
