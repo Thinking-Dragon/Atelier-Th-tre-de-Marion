@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img src="@/assets/brand/logo-brown.svg" alt="Logo de Atelier-Théâtre de Marion" >
     <Navigation />
     <router-view/>
   </div>
