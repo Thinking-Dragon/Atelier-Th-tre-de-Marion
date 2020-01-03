@@ -33,9 +33,7 @@
 </template>
 
 <style lang="less">
-    #nav{
-
-    }
+    
 </style>
 
 <script>
