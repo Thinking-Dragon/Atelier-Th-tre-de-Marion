@@ -1,6 +1,7 @@
 <template>
-  <div class="home">
-  </div>
+    <div class="home">
+        Le monde merveilleux des contes est un trésor pour nos enfants.
+    </div>
 </template>
 
 <script>
