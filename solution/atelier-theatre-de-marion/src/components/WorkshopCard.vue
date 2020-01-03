@@ -17,7 +17,7 @@ export default {
         accentColour: String,
         image: {
             type: String,
-            default: 'no-image.png'
+            default: 'no-image.svg'
         },
         details: String
     },
