@@ -20,7 +20,7 @@ export default {
         title: String,
         image: {
             type: String,
-            default: 'no-image.png'
+            default: 'no-image.svg'
         }
     },
     computed: {
