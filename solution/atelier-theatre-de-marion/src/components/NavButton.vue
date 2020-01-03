@@ -18,7 +18,10 @@ export default {
     props: {
         route: String,
         title: String,
-        image: String
+        image: {
+            type: String,
+            default: 'no-image.png'
+        }
     },
     computed: {
         bgImage() {
