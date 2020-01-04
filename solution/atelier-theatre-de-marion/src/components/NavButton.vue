@@ -72,4 +72,8 @@ export default {
             -webkit-transition: all 500ms;
         }
     }
+
+    .router-link-active .card {
+        background: #00000033;
+    }
 </style>
