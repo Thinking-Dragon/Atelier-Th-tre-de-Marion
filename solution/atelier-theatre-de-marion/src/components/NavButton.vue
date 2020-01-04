@@ -1,7 +1,7 @@
 <template>
     <div class="nav-btn">
         <router-link :to="route" style="text-decoration: none;">
-            <div class="card" :style="bgImage" v-bind:class="{'compact': isCompactX}">
+            <div class="card" :style="bgImage" v-bind:class="{'compact': isCompact}">
                 <span>{{ title }}</span>
             </div>
         </router-link>
@@ -19,7 +19,7 @@ export default {
         },
     },
     computed: {
-        isCompactX() {
+        isCompact() {
             return this.$route.name != "home";
         },
         bgImage() {
