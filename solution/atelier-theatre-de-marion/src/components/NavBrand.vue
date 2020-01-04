@@ -1,5 +1,5 @@
 <template>
-    <div id="brand" class="border">
+    <div class="border navbrand">
         <router-link to="/">
             <img src="@/assets/brand/logo-brown.svg" alt="Atelier-Théâtre de Marion">
         </router-link>
@@ -8,17 +8,17 @@
 
 <script>
 export default {
-    
+
 }
 </script>
 
-<style>
-    #brand{
+<style lang="less">
+    .navbrand {
         background-image: linear-gradient(white, pink);
         border-radius: 2.5vw;
-    }
 
-    img{
-        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 </style>
