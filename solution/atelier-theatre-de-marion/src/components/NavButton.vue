@@ -24,30 +24,35 @@ export default {
         },
         bgImage() {
             return {
-                'background-image': 'url(' + require('@/assets/' + this.image) + ')'
+                'background-image': 'url(' + require('@/assets/' + this.image) + ')',
+                'background-size': 'contain'
             }
         }
     }
 }
 </script>
 
-<style lang="less">
-    * {
-        --compact-scale: 0.8;
-    }
-    
+<style lang="less">    
     .nav-btn {
         .card {
-            margin-top: 30vh;
-            min-height: 8.55rem;
+            margin-top: 5vh;
+            height: 20rem;
             padding: auto;
             display: flex;
             align-items: center;
             justify-content: center;
+
             span {
                 color: rgb(221, 221, 221);
                 text-shadow: 0 1px 3px black;
             }
+
+            border-radius: 25px;
+
+            transition: all 500ms;
+            -moz-transition: all 500ms;
+            -o-transition: all 500ms;
+            -webkit-transition: all 500ms;
         }
 
         .card:hover {
@@ -55,21 +60,16 @@ export default {
         }
 
         .card.compact {
-            margin-top: 0;
-            min-height: 6.55rem;
+            --compact-scale: 0.8;
+
+            margin-top: 0vh;
+            height: 5rem;
 
             transform: scale(var(--compact-scale));
             -moz-transform: scale(var(--compact-scale));
             -o-transform: scale(var(--compact-scale));
             -ms-transform: scale(var(--compact-scale));
             -webkit-transform: scale(var(--compact-scale));
-        }
-
-        * {
-            transition: all 500ms;
-            -moz-transition: all 500ms;
-            -o-transition: all 500ms;
-            -webkit-transition: all 500ms;
         }
     }
 
