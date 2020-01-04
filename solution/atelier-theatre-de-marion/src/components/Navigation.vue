@@ -1,5 +1,6 @@
 <template>
     <div id="nav" class="row">
+        <div class="col-5 row">
         <NavButton
             class="offset-1 col-2"
             title="Ateliers artistiques"
