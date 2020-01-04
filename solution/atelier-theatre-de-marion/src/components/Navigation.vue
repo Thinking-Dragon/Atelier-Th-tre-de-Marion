@@ -5,13 +5,13 @@
             class="offset-1 col-2"
             title="Ateliers artistiques"
             route="/kids-workshops"
-            image="logo.png"
+                image="navigation/images/1.jpg"
         />
         <NavButton
             class="col-2"
             title="Cours de formation"
             route="/masterclasses"
-            image="logo.png"
+                image="navigation/images/2.jpg"
         />
         <div class="col-2">
             <NavBrand/>
@@ -22,13 +22,13 @@
             class="col-2"
             title="Boutique"
             route="/shop"
-            image="logo.png"
+                image="navigation/images/3.jpg"
         />
         <NavButton
             class="col-2"
             title="Mission"
             route="/mission"
-            image="logo.png"
+                image="navigation/images/4.jpg"
         />
     </div>
 </template>
