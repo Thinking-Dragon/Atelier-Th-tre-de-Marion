@@ -1,13 +1,8 @@
 <template>
     <div class="nav-btn">
         <router-link :to="route" style="text-decoration: none;">
-            <div class="card" :style="bgImage">
-                <div class="card-header">
-                    <span>{{ title }}</span>
-                </div>
-                <div class="card-body" >
-
-                </div>
+            <div class="card" :style="bgImage" v-bind:class="{'compact': isCompactX}">
+                <span>{{ title }}</span>
             </div>
         </router-link>
     </div>
@@ -21,9 +16,12 @@ export default {
         image: {
             type: String,
             default: 'no-image.svg'
-        }
+        },
     },
     computed: {
+        isCompactX() {
+            return this.$route.name != "home";
+        },
         bgImage() {
             return {
                 'background-image': 'url(' + require('@/assets/' + this.image) + ')'
@@ -34,26 +32,44 @@ export default {
 </script>
 
 <style lang="less">
+    * {
+        --compact-scale: 0.8;
+    }
     
-    .nav-btn{
-        .card{
-            //background-image: url("~@/assets/logo.png");
+    .nav-btn {
+        .card {
             margin-top: 30vh;
-
-            .card-header{
-                background-image: linear-gradient(white, pink);
-                min-height: 4.55rem;
-                padding: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
+            min-height: 8.55rem;
+            padding: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                color: rgb(221, 221, 221);
+                text-shadow: 0 1px 3px black;
             }
+        }
 
-            .card-body{
-                min-height: 10rem;
-            }
+        .card:hover {
+            background: #00000033;
+        }
 
+        .card.compact {
+            margin-top: 0;
+            min-height: 6.55rem;
+
+            transform: scale(var(--compact-scale));
+            -moz-transform: scale(var(--compact-scale));
+            -o-transform: scale(var(--compact-scale));
+            -ms-transform: scale(var(--compact-scale));
+            -webkit-transform: scale(var(--compact-scale));
+        }
+
+        * {
+            transition: all 500ms;
+            -moz-transition: all 500ms;
+            -o-transition: all 500ms;
+            -webkit-transition: all 500ms;
         }
     }
 </style>
