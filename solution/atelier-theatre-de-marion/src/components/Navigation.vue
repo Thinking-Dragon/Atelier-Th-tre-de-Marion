@@ -13,11 +13,8 @@
             route="/masterclasses"
                 image="navigation/images/2.jpg"
         />
-        <div class="col-2">
-            <NavBrand/>
-            <router-link to="/contact-us">Contactez-nous!</router-link>
         </div>
-        
+        <NavBrandContainer class="col-2" />
         <NavButton
             class="col-2"
             title="Boutique"
@@ -40,12 +37,12 @@
 <script>
 
 import NavButton from '@/components/NavButton.vue'
-import NavBrand from '@/components/NavBrand.vue'
+import NavBrandContainer from '@/components/NavBrandContainer.vue'
 
 export default {
     components: {
         NavButton,
-        NavBrand
+        NavBrandContainer
     }
 }
 </script>
