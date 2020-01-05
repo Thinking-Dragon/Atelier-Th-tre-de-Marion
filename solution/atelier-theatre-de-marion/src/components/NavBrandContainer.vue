@@ -9,13 +9,19 @@
 import NavBrand from '@/components/NavBrand.vue'
 
 export default {
-    computed: {
-        isCompact() {
-            return this.$route.name != 'home';
+    props: {
+        isCompactCallback: {
+            type: Function,
+            default: () => {}
         }
     },
     components: {
         NavBrand
+    },
+    computed: {
+        isCompact() {
+            return this.isCompactCallback();
+        }
     }
 }
 </script>

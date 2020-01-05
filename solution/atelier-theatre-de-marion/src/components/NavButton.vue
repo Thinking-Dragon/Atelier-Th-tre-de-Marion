@@ -17,16 +17,20 @@ export default {
             type: String,
             default: 'no-image.svg'
         },
+        isCompactCallback: {
+            type: Function,
+            default: () => {}
+        }
     },
     computed: {
-        isCompact() {
-            return this.$route.name != "home";
-        },
         bgImage() {
             return {
                 'background-image': 'url(' + require('@/assets/' + this.image) + ')',
                 'background-size': 'contain'
             }
+        },
+        isCompact() {
+            return this.isCompactCallback();
         }
     }
 }
