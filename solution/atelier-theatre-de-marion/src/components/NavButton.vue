@@ -26,8 +26,8 @@ export default {
         bgImage() {
             return {
                 'background-image': 'url(' + require('@/assets/' + this.image) + ')',
-                'background-size': 'contain'
-            }
+                'background-size': 'cover'
+            };
         },
         isCompact() {
             return this.isCompactCallback();
@@ -51,7 +51,7 @@ export default {
                 text-shadow: 0 1px 3px black;
             }
 
-            border-radius: 25px;
+            border-radius: 10px;
 
             transition: all 500ms;
             -moz-transition: all 500ms;
@@ -60,7 +60,11 @@ export default {
         }
 
         .card:hover {
-            background: #00000033;
+            --hover-shadow-overlay-colour: #50505057;
+            box-shadow: inset 100px 0px 100px -25px var(--hover-shadow-overlay-colour),
+                        inset -100px 0px 100px -25px var(--hover-shadow-overlay-colour),
+                        inset 0px 100px 100px -50px var(--hover-shadow-overlay-colour),
+                        inset 0px -100px 100px -50px var(--hover-shadow-overlay-colour);
         }
 
         .card.compact {

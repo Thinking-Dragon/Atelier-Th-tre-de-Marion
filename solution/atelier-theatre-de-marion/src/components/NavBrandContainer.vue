@@ -34,18 +34,24 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
     .navbrand-container {
         margin-top: 15vh;
+    }
 
+    .navbrand-container, .navbrand-container * {
         transition: all 500ms;
         -moz-transition: all 500ms;
         -o-transition: all 500ms;
         -webkit-transition: all 500ms;
     }
 
-    .navbrand-container:hover {
-        
+    .navbrand-container .navbrand:hover {
+        --hover-shadow-overlay-colour: #50505057;
+        box-shadow: inset 100px 0px 100px -25px var(--hover-shadow-overlay-colour),
+                    inset -100px 0px 100px -25px var(--hover-shadow-overlay-colour),
+                    inset 0px 100px 100px -50px var(--hover-shadow-overlay-colour),
+                    inset 0px -100px 100px -50px var(--hover-shadow-overlay-colour);
     }
 
     .navbrand-container.compact {

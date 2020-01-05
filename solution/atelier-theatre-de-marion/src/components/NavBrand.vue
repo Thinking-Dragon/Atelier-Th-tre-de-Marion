@@ -14,7 +14,7 @@ export default {
 
 <style lang="less">
     .navbrand {
-        background-image: linear-gradient(white, pink);
+        background-image: linear-gradient(rgba(255, 255, 255, 0.493), rgba(255, 228, 233, 0.493));
         border-radius: 2.5vw;
 
         img {
