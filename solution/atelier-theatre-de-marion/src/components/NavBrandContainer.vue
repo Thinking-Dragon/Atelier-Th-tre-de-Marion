@@ -1,7 +1,10 @@
 <template>
   <div class="navbrand-container" v-bind:class="{'compact': isCompact}">
         <NavBrand />
-        <router-link to="/contact-us">Contactez-nous!</router-link>
+        <a href="javascript:void" v-b-modal.contact-us-modal>Contactez-nous!</a>
+        <b-modal id="contact-us-modal" title="BootstrapVue">
+            <p class="my-4">Hello from modal!</p>
+        </b-modal>
   </div>
 </template>
 
@@ -13,6 +16,11 @@ export default {
         isCompactCallback: {
             type: Function,
             default: () => {}
+        }
+    },
+    data() {
+        return {
+            showContactUsModal: false
         }
     },
     components: {
