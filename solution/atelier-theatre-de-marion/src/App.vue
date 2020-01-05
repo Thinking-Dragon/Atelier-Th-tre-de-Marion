@@ -6,6 +6,9 @@
 </template>
 
 <style lang="less">
+html, #app {
+  background-image: url(~@/assets/general/background-image.jpg);
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
